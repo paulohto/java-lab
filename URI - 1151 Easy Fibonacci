@@ -1,0 +1,38 @@
+// Paulo Henrique Teixeira de Oliveira
+// https://github.com/paulohto/
+
+import java.util.Scanner;
+import java.io.IOException;
+
+class Main {
+  public static void main(String[] args) throws IOException {
+    Scanner sc = new Scanner(System.in);
+
+    int n = sc.nextInt();
+    int c = 0;
+    int f = 0;
+    int x = 0;
+    int y = 1;
+
+    while (c < n) {
+
+      if (c > 1) {
+        f = x + y;
+        x = y;
+        y = f;
+        System.out.print(f + " ");
+
+        if (c == n-1){
+          System.out.println();
+          break;
+        }
+      }
+        
+      if (c <= 1) {
+        System.out.print(c + " ");
+      }
+      c ++;
+    }
+
+  }
+}
